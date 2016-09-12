@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".activities.MessageDetailActivity"
+        tools:showIn="@layout/activity_message_detail">
+
+        <ImageView
+            android:id="@+id/md_star"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ic_toggle_star" />
+
+        <TextView
+            android:id="@+id/md_subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/md_star"
+            android:paddingBottom="5dp"
+            android:paddingTop="10dp"
+            android:text="Android app need to be released today. iTs very Important."
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/md_participants"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/md_subject"
+            android:layout_toLeftOf="@+id/md_star"
+            android:paddingBottom="15dp"
+            android:paddingTop="5dp"
+            android:text="Mahesh, Murali"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/md_view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/md_participants"
+            android:background="@color/light_grey" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/md_profile"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_below="@+id/md_view"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_toggle_star_selected"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/md_from_to"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/md_view"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/md_profile"
+            android:paddingBottom="10dp"
+            android:paddingTop="5dp"
+            android:text="Cloud Message to All"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/md_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/md_from_to"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/md_profile"
+            android:paddingBottom="15dp"
+            android:paddingTop="5dp"
+            android:text="20 Aug"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/md_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/md_profile"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="Hello Message Body"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+</ScrollView>
